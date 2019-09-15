@@ -1,0 +1,213 @@
+/*Styling for the main template*/
+/*allow smooth scrolling when using anchor links*/
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #faf9f5;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: normal;
+}
+/*for medium devices and smaller*/
+@media (min-width: 360px) and (max-width: 767px) {
+    .p-2 {
+        /*apply p-3 class to left & right padding*/
+		padding: 0.5rem 1rem !important;
+    }
+}
+/*styles to enable sticky footer*/
+.main {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+.main-content {
+	flex: 1;
+}
+/*end styles*/
+.footer-text {
+	font-weight: bold;
+	color: #fff;
+}
+#main-footer {
+	height: 170px;
+	width: 100%;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #343a40;
+}
+#social-footer {
+	height: 80px;
+	margin-bottom: 20px;
+	background-color: #72787d;
+}
+.social-icon {
+	margin: 16px 8px 0;
+}
+
+/*Styling for Dashboard page*/
+.banner {
+    background-image:url('/static/img/desk.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 95vh;
+    padding-top: 450px;
+    opacity: 0.8;
+}
+@media (max-width: 575px) {
+	.banner {
+		min-height: 80%;
+		padding-top: 160px;
+	}
+}
+.main-heading {
+    text-align: center;
+    font-size: 66px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 4px #757575;
+    margin-bottom: 80px;
+}
+.main-heading .border {
+    display: inline-block;
+    color: #fff;
+    border: 0px none !important;
+    padding: 20px;
+}
+.see-charts {
+    display: block;
+    font-size: 45px;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+/*amend Font Awesome down arrow*/
+.fa-chevron-circle-down {
+    color: #fff;
+}
+.fa-chevron-circle-down:hover {
+    color: #e1e1e1;
+}
+h1 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    color: #eb008b;
+}
+
+/*Amend some Bootstrap default values*/
+/*force the dropdown font to be the same as the rest of the navbar*/
+.dropdown-menu {
+    font-size: 14px;
+}
+/*overwrite the default colour of all the links on the navbar*/
+.navbar-dark .navbar-nav .nav-link {
+	color: #e93ea3;
+}
+/*border colour for the 'burger' button of the collapsible nav menu*/
+.navbar-dark .navbar-toggler {
+	border-color: #eb008b;
+}
+/*colour of the horizontal lines for the 'burger' button of the collapsible nav menu*/
+.navbar-dark .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(235, 0, 139, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/*Amend bootstrap - text colour for the brand/title text on the collapsible nav menu*/
+.navbar-inverse .navbar-brand {
+    color: #ffbbbf;
+}
+/*text colour for all of the links on the collapsible nav menu*/
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffbbbf;
+    overflow: scroll;
+}
+/*text and background colour for the nav link of active/current page*/
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #7c181e;
+}
+/*border colour for button of the collapsible nav menu*/
+.navbar-inverse .navbar-toggle {
+    border-color: #a22e34;
+}
+/*background colour for button of the collapsible nav menu*/
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #a22e34;
+}
+/*some padding for the right side of navbar area*/
+#myCollapsingList {
+    padding-right: 15px;
+}
+
+/*Force the navbar heading font size to reduce on smaller screens*/
+@media (min-width: 321px) and (max-width: 460px) {
+    .brand {
+        font-size: 1.5rem;
+    }
+}
+/*Takes care of the smallest size screen*/
+@media (max-width: 320px) {
+    .brand {
+        font-size: 1.3rem;
+    }
+}
+
+/*Add a custom style to the 'Start Tour' button */
+.intro-button {
+    margin-top: 12px;
+}
+.intro-button:hover,
+.intro-button:active {
+    margin-top: 12px;
+    border: 2px solid #951c23;
+    border-radius: 4px;
+    background-image: linear-gradient(0deg, #ffd4dc 55%, #ffedec 55%);
+}
+
+.intro-section {
+    background: rgba(255,255,255,0.4);      /*rgba used to turn only the background colour transparent*/
+    color: #222;
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+/*Modify the chart title areas to have bold text*/
+.chart-wrapper .chart-title {
+    font-weight: bold;
+}
+
+/*Enable scrolling on the divs containing the charts ('chart-stage') when the page is viewed on smaller screens*/
+.chart-wrapper .scrolling {
+    overflow-x: auto;
+}
+
+/*Disable the click functionality on the winners and runners-up charts*/
+#winners-row-chart,
+#runners-up-chart {
+    pointer-events: none;
+}
+
+/*Modify the drop-down box (aka dc.selectMenu function) to include green background*/
+.dc-select-menu {
+    background: #33CC99;
+    width: 100%;
+    border: none;
+    position: relative;
+    height: 31px;
+    font-size: 15px;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 0px;
+}

@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Training Reports</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.0/dc.css">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='lib/css/keen-dashboards.css')}}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="main"><!-- Enable sticky footer -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark p-2"><!-- Enable the navbar box to stretch to the edges -->
+            <div class="container-fluid"><!-- Add side padding to the navbar content -->
+                <a class="navbar-brand" href="/">
+                    <img src="{{ url_for ('static', filename='img/flow_logo.png')}}" class="d-inline-block align-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="/">Dashboard</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/trainees/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trainees</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-label="navbarDropdown">
+                                <a class="dropdown-item" href="/trainees/">Trainees</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/trainees/manage">Manage Trainees</a>
+                                <a class="dropdown-item" href="/trainees/add">Add Trainees</a>
+                                <a class="dropdown-item" href="/trainees/import">Import Trainees</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/branches/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Branches</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-label="navbarDropdown">
+                                <a class="dropdown-item" href="/branches/">Branches</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/branches/manage">Manage Branches</a>
+                                <a class="dropdown-item" href="/branches/add">Add Branches</a>
+                                <a class="dropdown-item" href="/branches/import">Import Branches</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/reports/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-label="navbarDropdown">
+                                <a class="dropdown-item" href="/reports/">Reports</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/reports/engagement">Engagement</a>
+                                <a class="dropdown-item" href="/reports/training">Training Progress</a>
+                                <a class="dropdown-item" href="/reports/data">Data Extract</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/settings/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-label="navbarDropdown">
+                                <a class="dropdown-item" href="/settings/">Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/settings/company">Company Settings</a>
+                                <a class="dropdown-item" href="/settings/module">Module Settings</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <!-- Enable sticky footer; this section has to go just above it -->
+            {% block content %}
+            {% endblock %}
+        </div>
+        
+        <footer id="main-footer">
+            <div id="social-footer" class="text-center">
+                
+            </div>
+            <p class="footer-text text-center">Copyright &copy; Annual Training Reports 2019</p>
+            <p class="footer-text text-center">Website designed and built by Max Miguta</p>
+        </footer>
+    </div>
+</body>
+
+<!-- Bootstrap core JS files -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.10.2/js/all.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.5/crossfilter.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.0/dc.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.js"></script>
+<script src="{{ url_for ('static', filename='js/charts.js')}}"></script>
+</html>
