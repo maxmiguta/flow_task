@@ -34,6 +34,50 @@ def add_trainees():
 def import_trainees():
     return render_template('trainees/import.html')
 
+@app.route('/branches/')
+def branches():
+    return render_template('branches.html')
+
+@app.route('/branches/manage')
+def manage_branches():
+    return render_template('branches/manage.html')
+
+@app.route('/branches/add')
+def add_branches():
+    return render_template('branches/add.html')
+
+@app.route('/branches/import')
+def import_branches():
+    return render_template('branches/import.html')
+
+@app.route('/reports/')
+def reports():
+    return render_template('reports.html')
+
+@app.route('/reports/engagement')
+def engagement():
+    return render_template('reports/engagement.html')
+
+@app.route('/reports/training')
+def training_progress():
+    return render_template('reports/training.html')
+
+@app.route('/reports/data')
+def data_extract():
+    return render_template('reports/data.html')
+
+@app.route('/settings/')
+def settings():
+    return render_template('settings.html')
+
+@app.route('/settings/company')
+def company_settings():
+    return render_template('settings/company.html')
+
+@app.route('/settings/module')
+def module_settings():
+    return render_template('settings/module.html')
+
 @app.route('/flow_task/training')
 def db_data():
     """
