@@ -6,7 +6,7 @@ html {
 body {
     background-color: #faf9f5;
     font-family: 'Arial', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     line-height: normal;
 }
 /*for medium devices and smaller*/
@@ -26,10 +26,6 @@ body {
 	flex: 1;
 }
 /*end styles*/
-.footer-text {
-	font-weight: bold;
-	color: #fff;
-}
 #main-footer {
 	height: 170px;
 	width: 100%;
@@ -38,13 +34,15 @@ body {
 	margin-left: auto;
 	background-color: #343a40;
 }
-#social-footer {
+#address-footer {
 	height: 80px;
-	margin-bottom: 20px;
-	background-color: #72787d;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    background-color: #72787d;
+    color: #fff;
 }
-.social-icon {
-	margin: 16px 8px 0;
+.footer-text {
+	color: #e93ea3;
 }
 
 /*Styling for Dashboard page*/
@@ -54,7 +52,7 @@ body {
     background-size: cover;
     position: relative;
     height: 95vh;
-    padding-top: 450px;
+    padding-top: 400px;
     opacity: 0.8;
 }
 @media (max-width: 575px) {
@@ -65,11 +63,11 @@ body {
 }
 .main-heading {
     text-align: center;
-    font-size: 66px;
+    font-size: 70px;
     letter-spacing: 8px;
     text-transform: uppercase;
     text-shadow: 4px 4px 4px #757575;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
 }
 .main-heading .border {
     display: inline-block;
@@ -79,7 +77,7 @@ body {
 }
 .see-charts {
     display: block;
-    font-size: 45px;
+    font-size: 47px;
     letter-spacing: 2px;
     color: #fff;
     margin-bottom: 20px;
@@ -97,15 +95,43 @@ h1 {
     margin-bottom: 40px;
     color: #eb008b;
 }
+/*Modify the chart title areas to have bold text*/
+.chart-wrapper .chart-title {
+    font-weight: bold;
+}
+/*Enable scrolling on the divs containing the charts ('chart-stage') when the page is viewed on smaller screens*/
+.chart-wrapper .scrolling {
+    overflow-x: auto;
+}
 
 /*Amend some Bootstrap default values*/
-/*force the dropdown font to be the same as the rest of the navbar*/
-.dropdown-menu {
-    font-size: 14px;
-}
 /*overwrite the default colour of all the links on the navbar*/
 .navbar-dark .navbar-nav .nav-link {
 	color: #e93ea3;
+}
+/*text and background colour for the navbar links upon hover*/
+.nav-item a:hover {
+	background-color: #444a51;
+	color: #e93ea3 !important;
+}
+/*force the link associated with the drop-down menu to be the default colour when the drop-down is active*/
+.dropdown-toggle {
+    color: #e93ea3 !important;
+}
+/*background colour for the whole drop-down menu*/
+/*force the font size of links on the drop-downs to be the same as the rest of the navbar*/
+.dropdown-menu {
+    background-color: #343a40;
+    margin-top: 9px;
+    font-size: 15px;
+}
+/*text colour for links on the drop-down menu*/
+.dropdown-item {
+    color: #fff;
+}
+/*adjust the line colour of the dropdown divider*/
+.dropdown-divider {
+    border-color: #2c3136;
 }
 /*border colour for the 'burger' button of the collapsible nav menu*/
 .navbar-dark .navbar-toggler {
@@ -114,100 +140,4 @@ h1 {
 /*colour of the horizontal lines for the 'burger' button of the collapsible nav menu*/
 .navbar-dark .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(235, 0, 139, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-/*Amend bootstrap - text colour for the brand/title text on the collapsible nav menu*/
-.navbar-inverse .navbar-brand {
-    color: #ffbbbf;
-}
-/*text colour for all of the links on the collapsible nav menu*/
-.navbar-inverse .navbar-nav > li > a {
-    color: #ffbbbf;
-    overflow: scroll;
-}
-/*text and background colour for the nav link of active/current page*/
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-    color: #fff;
-    background-color: #7c181e;
-}
-/*border colour for button of the collapsible nav menu*/
-.navbar-inverse .navbar-toggle {
-    border-color: #a22e34;
-}
-/*background colour for button of the collapsible nav menu*/
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus {
-    background-color: #a22e34;
-}
-/*some padding for the right side of navbar area*/
-#myCollapsingList {
-    padding-right: 15px;
-}
-
-/*Force the navbar heading font size to reduce on smaller screens*/
-@media (min-width: 321px) and (max-width: 460px) {
-    .brand {
-        font-size: 1.5rem;
-    }
-}
-/*Takes care of the smallest size screen*/
-@media (max-width: 320px) {
-    .brand {
-        font-size: 1.3rem;
-    }
-}
-
-/*Add a custom style to the 'Start Tour' button */
-.intro-button {
-    margin-top: 12px;
-}
-.intro-button:hover,
-.intro-button:active {
-    margin-top: 12px;
-    border: 2px solid #951c23;
-    border-radius: 4px;
-    background-image: linear-gradient(0deg, #ffd4dc 55%, #ffedec 55%);
-}
-
-.intro-section {
-    background: rgba(255,255,255,0.4);      /*rgba used to turn only the background colour transparent*/
-    color: #222;
-    font-size: 18px;
-    font-weight: 200;
-    text-align: center;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    border-radius: 3px;
-}
-
-/*Modify the chart title areas to have bold text*/
-.chart-wrapper .chart-title {
-    font-weight: bold;
-}
-
-/*Enable scrolling on the divs containing the charts ('chart-stage') when the page is viewed on smaller screens*/
-.chart-wrapper .scrolling {
-    overflow-x: auto;
-}
-
-/*Disable the click functionality on the winners and runners-up charts*/
-#winners-row-chart,
-#runners-up-chart {
-    pointer-events: none;
-}
-
-/*Modify the drop-down box (aka dc.selectMenu function) to include green background*/
-.dc-select-menu {
-    background: #33CC99;
-    width: 100%;
-    border: none;
-    position: relative;
-    height: 31px;
-    font-size: 15px;
-    color: white;
-    vertical-align: middle;
-    text-align: center;
-    padding-top: 4px;
-    padding-bottom: 0px;
 }
