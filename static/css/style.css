@@ -60,7 +60,8 @@ body {
 }
 @media (max-width: 575px) {
     .brandBtn {
-	    right: 20px;
+        bottom: 10%;
+        right: 20px;
     }
 }
 .fa-magic {
@@ -82,7 +83,7 @@ body {
 }
 @media (max-width: 575px) {
 	.style1 .banner {
-		height: 75vh;
+		height: 90vh;
 		padding-top: 160px;
 	}
 }
@@ -112,10 +113,16 @@ body {
     text-shadow: 4px 4px 4px #757575;
     margin-bottom: 120px;
 }
-@media (max-width: 575px) {
-	.main-heading {
+@media (min-width: 361px) and (max-width: 575px) {
+    .main-heading {
         font-size: 50px;
 		margin-bottom: 80px;
+	}
+}
+@media (max-width: 360px) {
+	.main-heading {
+        font-size: 40px;
+		margin-bottom: 70px;
 	}
 }
 .main-heading .border {
