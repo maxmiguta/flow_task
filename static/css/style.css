@@ -17,7 +17,7 @@ body {
     }
 }
 /*styles to enable sticky footer*/
-.main {
+#main {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
@@ -41,25 +41,68 @@ body {
     background-color: #72787d;
     color: #fff;
 }
-.footer-text {
+.style1 .footer-text {
 	color: #e93ea3;
+}
+.style2 .footer-text {
+	color: #b9975b;
+}
+.style3 .footer-text {
+	color: #81c0c3;
+}
+/*button to switch branding*/
+.brandBtn {
+    position: fixed;
+    top: 50%;
+    right: 40px;
+    z-index: 99;
+    cursor: pointer;
+}
+@media (max-width: 575px) {
+    .brandBtn {
+	    right: 20px;
+    }
+}
+.fa-magic {
+    color: #eb008b;
+}
+.fa-magic:hover {
+    color: #eb33a0;
 }
 
 /*Styling for Dashboard page*/
-.banner {
-    background-image:url('/static/img/desk.jpg');
+.style1 .banner {
+    background-image:url('/static/img/table.jpg');
     background-position: center;
     background-size: cover;
     position: relative;
     height: 95vh;
     padding-top: 400px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 @media (max-width: 575px) {
-	.banner {
-		min-height: 80%;
+	.style1 .banner {
+		height: 75vh;
 		padding-top: 160px;
 	}
+}
+.style2 .banner {
+    background-image:url('/static/img/alcohol.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 95vh;
+    padding-top: 400px;
+    opacity: 0.7;
+}
+.style3 .banner {
+    background-image:url('/static/img/tacos.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 95vh;
+    padding-top: 400px;
+    opacity: 0.7;
 }
 .main-heading {
     text-align: center;
@@ -68,6 +111,12 @@ body {
     text-transform: uppercase;
     text-shadow: 4px 4px 4px #757575;
     margin-bottom: 120px;
+}
+@media (max-width: 575px) {
+	.main-heading {
+        font-size: 50px;
+		margin-bottom: 80px;
+	}
 }
 .main-heading .border {
     display: inline-block;
@@ -82,6 +131,11 @@ body {
     color: #fff;
     margin-bottom: 20px;
 }
+@media (max-width: 575px) {
+	.see-charts {
+        font-size: 35px;
+	}
+}
 /*amend Font Awesome down arrow*/
 .fa-chevron-circle-down {
     color: #fff;
@@ -89,11 +143,36 @@ body {
 .fa-chevron-circle-down:hover {
     color: #e1e1e1;
 }
-h1 {
+/*display the right sized arrow based on screen size*/
+/*do the same with the switch branding button*/
+.small-screen {
+	display: none;
+}
+@media (max-width: 575px) {
+	.large-screen {
+		display: none;
+	}
+	.small-screen {
+		display: block;
+	}
+}
+.style1 h1 {
     text-align: center;
     margin-top: 60px;
     margin-bottom: 40px;
     color: #eb008b;
+}
+.style2 h1 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    color: #b9975b;
+}
+.style3 h1 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    color: #81c0c3;
 }
 /*Modify the chart title areas to have bold text*/
 .chart-wrapper .chart-title {
