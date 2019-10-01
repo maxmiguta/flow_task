@@ -16,6 +16,10 @@ body {
 		padding: 0.5rem 1rem !important;
     }
 }
+/*hide each "navbar-brand" image when appropriate*/
+.hide {
+    display: none;
+}
 /*styles to enable sticky footer*/
 #main {
 	display: flex;
