@@ -13,7 +13,7 @@ body {
 @media (min-width: 360px) and (max-width: 767px) {
     .p-2 {
         /*apply p-3 class to left & right padding*/
-		padding: 0.5rem 1rem !important;
+        padding: 0.5rem 1rem !important;
     }
 }
 /*hide each "navbar-brand" image when appropriate*/
@@ -22,37 +22,37 @@ body {
 }
 /*styles to enable sticky footer*/
 #main {
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 .main-content {
-	flex: 1;
+    flex: 1;
 }
 /*end styles*/
 #main-footer {
-	height: 170px;
-	width: 100%;
-	margin-top: 30px;
-	margin-right: auto;
-	margin-left: auto;
-	background-color: #343a40;
+    height: 170px;
+    width: 100%;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #343a40;
 }
 #address-footer {
-	height: 80px;
+    height: 80px;
     margin-bottom: 20px;
     padding-top: 30px;
     background-color: #72787d;
     color: #fff;
 }
 .style1 .footer-text {
-	color: #e93ea3;
+    color: #e93ea3;
 }
 .style2 .footer-text {
-	color: #b9975b;
+    color: #b9975b;
 }
 .style3 .footer-text {
-	color: #81c0c3;
+    color: #81c0c3;
 }
 /*button to switch branding*/
 .brandBtn {
@@ -143,9 +143,9 @@ body {
     margin-bottom: 20px;
 }
 @media (max-width: 575px) {
-	.see-charts {
+    .see-charts {
         font-size: 35px;
-	}
+    }
 }
 /*amend Font Awesome down arrow*/
 .fa-chevron-circle-down {
@@ -157,15 +157,15 @@ body {
 /*display the right sized arrow based on screen size*/
 /*do the same with the switch branding button*/
 .small-screen {
-	display: none;
+    display: none;
 }
 @media (max-width: 575px) {
-	.large-screen {
-		display: none;
-	}
-	.small-screen {
-		display: block;
-	}
+    .large-screen {
+        display: none;
+    }
+    .small-screen {
+        display: block;
+    }
 }
 .style1 h1 {
     text-align: center;
@@ -195,39 +195,103 @@ body {
 }
 
 /*Amend some Bootstrap default values*/
-/*overwrite the default colour of all the links on the navbar*/
-.navbar-dark .navbar-nav .nav-link {
-	color: #e93ea3;
+/*set a background colour for each brand style on the navbar menu*/
+.style1 .bg-dark {
+    background-color: #343a40 !important;
 }
-/*text and background colour for the navbar links upon hover*/
-.nav-item a:hover {
-	background-color: #444a51;
-	color: #e93ea3 !important;
+.style2 .bg-dark {
+    background-color: #712626 !important;
 }
-/*force the link associated with the drop-down menu to be the default colour when the drop-down is active*/
-.dropdown-toggle {
+.style3 .bg-dark {
+    background-color: #81c0c3 !important;
+}
+/*overwrite the default colour of all the links on the navbar - different for each brand style*/
+.style1 .navbar-dark .navbar-nav .nav-link {
+    color: #e93ea3;
+}
+.style2 .navbar-dark .navbar-nav .nav-link {
+    color: #ffd58a;
+}
+.style3 .navbar-dark .navbar-nav .nav-link {
+    color: #4942db;
+}
+/*text and background colour for the navbar links upon hover - different for each brand style*/
+.style1 .nav-item a:hover {
+    background-color: #444a51;
     color: #e93ea3 !important;
 }
-/*background colour for the whole drop-down menu*/
+.style2 .nav-item a:hover {
+    background-color: #8c3030;
+    color: #ffd58a !important;
+}
+.style3 .nav-item a:hover {
+    background-color: #9ddcdf;
+    color: #4942db !important;
+}
+/*force the link associated with the drop-down menu to be the default colour when the drop-down is active - different for each brand style*/
+.style1 .dropdown-toggle {
+    color: #e93ea3 !important;
+}
+.style2 .dropdown-toggle {
+    color: #ffd58a !important;
+}
+.style3 .dropdown-toggle {
+    color: #4942db !important;
+}
+/*background colour for the whole drop-down menu - different for each brand style*/
 /*force the font size of links on the drop-downs to be the same as the rest of the navbar*/
-.dropdown-menu {
+.style1 .dropdown-menu {
     background-color: #343a40;
     margin-top: 9px;
     font-size: 15px;
 }
-/*text colour for links on the drop-down menu*/
-.dropdown-item {
-    color: #fff;
+.style2 .dropdown-menu {
+    background-color: #712626;
+    margin-top: 9px;
+    font-size: 15px;
 }
-/*adjust the line colour of the dropdown divider*/
-.dropdown-divider {
+.style3 .dropdown-menu {
+    background-color: #81c0c3;
+    margin-top: 9px;
+    font-size: 15px;
+}
+/*text colour for links on the drop-down menu - different for each brand style*/
+.style1 .dropdown-item {
+    color: #e93ea3;
+}
+.style2 .dropdown-item {
+    color: #ffd58a;
+}
+.style3 .dropdown-item {
+    color: #4942db;
+}
+/*adjust the line colour of the dropdown divider - different for each brand style*/
+.style1 .dropdown-divider {
     border-color: #2c3136;
 }
-/*border colour for the 'burger' button of the collapsible nav menu*/
-.navbar-dark .navbar-toggler {
-	border-color: #eb008b;
+.style2 .dropdown-divider {
+    border-color: #602020;
 }
-/*colour of the horizontal lines for the 'burger' button of the collapsible nav menu*/
-.navbar-dark .navbar-toggler-icon {
-	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(235, 0, 139, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.style3 .dropdown-divider {
+    border-color: #70a5a7;
+}
+/*border colour for the 'burger' button of the collapsible nav menu - different for each brand style*/
+.style1 .navbar-dark .navbar-toggler {
+    border-color: #eb008b;
+}
+.style2 .navbar-dark .navbar-toggler {
+    border-color: #ffd58a;
+}
+.style3 .navbar-dark .navbar-toggler {
+    border-color: #4942db;
+}
+/*colour of the horizontal lines for the 'burger' button of the collapsible nav menu - different for each brand style*/
+.style1 .navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(235, 0, 139, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.style2 .navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 213, 138, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.style3 .navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(73, 66, 219, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }

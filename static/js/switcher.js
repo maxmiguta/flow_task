@@ -27,15 +27,11 @@ button.onclick = function() {
         }
     }
 
+    // the 'if' statement iterates through the states 0 -> 1 -> 2 and then restarts; facilitates the logo swaps
+    // this has to go after the 'for' loop because we want the 'state' to always start with 0
     if (state < 2) {
         state++;
     } else {
         state = 0;
     }
 };
-
-// firstElementChild.nextElementSibling.classList
-// childNodes[1].classList
-
-// how does the function get from state 0 to 1 to 2?
-// how does it know when it's at a certain state?
