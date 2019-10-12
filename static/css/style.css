@@ -154,8 +154,7 @@ body {
 .fa-chevron-circle-down:hover {
     color: #e1e1e1;
 }
-/*display the right sized arrow based on screen size*/
-/*do the same with the switch branding button*/
+/*display the correct sized down arrow button based on screen size*/
 .small-screen {
     display: none;
 }
@@ -165,6 +164,13 @@ body {
     }
     .small-screen {
         display: block;
+    }
+}
+/*do the same with the brand switching button*/
+/*instead of having two buttons and hiding one, set the size of it to 3em - what's normally reserved for .fa-3x class*/
+@media (max-width: 575px) {
+    .fa-4x {
+        font-size: 3em;
     }
 }
 .style1 h1 {
